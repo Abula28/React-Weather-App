@@ -1,6 +1,6 @@
 .weather-cont {
   width: 423px;
-  height: 858px;
+  padding-bottom: 50px;
   border-radius: 40px;
   background: linear-gradient(135deg, #08244f 0%, #134cb5 47.38%, #0b42ab 100%);
   display: flex;
@@ -52,7 +52,10 @@
   }
 
   .prec {
-    width: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     p {
       color: #fff;
       text-align: center;
@@ -72,7 +75,7 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 20px;
-    background: #104084;
+    background: #2177ee;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
     padding: 8px;
 
@@ -93,7 +96,7 @@
     border-radius: 20px;
     width: 80%;
     padding: 12px 14px 14px 12px;
-    background: #104084;
+    background: #1b5cb8;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
     .data-time {
       display: flex;

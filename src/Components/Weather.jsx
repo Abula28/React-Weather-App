@@ -15,6 +15,18 @@ export const Weather = () => {
   const date = new Date();
   const apiKey = "e05aa2ca391fdd61d8ca0d0a85f94cf5";
 
+  const weatherInfo = () => {
+    switch (data.weather && data.weather[0].main) {
+      case "Clear":
+        return "Sunny";
+      case "Clouds":
+        return "Cloudy";
+      case "Rain":
+        return "Rainy";
+      default:
+        return "Sunny";
+    }
+  };
   const imageChange = () => {
     switch (data.weather && data.weather[0].main) {
       case "Clear":
@@ -81,13 +93,18 @@ export const Weather = () => {
               <span>Precipitations</span> Max.: {parseInt(data.main.temp_max)}º
               Min.: {parseInt(data.main.temp_min)}º
             </p>
+
+            <p className="weather-info">
+              <span>Wheather information: </span>
+              {weatherInfo()}
+            </p>
           </div>
 
           <div
             style={{
               background:
                 data.weather && data.weather[0].main === "Clear"
-                  ? "#00102680"
+                  ? " #29B2DD"
                   : "none",
             }}
             className="spec-infos"
@@ -106,7 +123,7 @@ export const Weather = () => {
             style={{
               background:
                 data.weather && data.weather[0].main === "Clear"
-                  ? "#00102680"
+                  ? " #29B2DD"
                   : "none",
             }}
             className="today-info"
